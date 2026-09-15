@@ -1,3 +1,1240 @@
-index.html
-style.css
-script.js
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="MimoLar — achadinhos para deixar sua casa mais bonita, organizada e confortável.">
+
+    <meta name="theme-color" content="#123B5D">
+
+    <title>MimoLar | Achadinhos para sua casa</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <a href="#inicio" class="logo">
+
+                <span class="logo-icon">M</span>
+
+                <span class="logo-text">
+                    <strong>MimoLar</strong>
+                    <small>achadinhos para casa</small>
+                </span>
+
+            </a>
+
+
+            <nav class="nav" id="nav">
+
+                <a href="#inicio">Início</a>
+
+                <a href="#produtos">Produtos</a>
+
+                <a href="#categorias">Categorias</a>
+
+                <a href="#sobre">Sobre nós</a>
+
+            </nav>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menu">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        ✨ ACHADINHOS DA SEMANA
+                    </span>
+
+
+                    <h1>
+                        Pequenos mimos que
+                        <span>transformam sua casa.</span>
+                    </h1>
+
+
+                    <p>
+                        Encontre produtos úteis, bonitos e práticos
+                        para deixar sua rotina mais confortável,
+                        organizada e especial.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#produtos"
+                            class="button button-primary">
+
+                            Ver achadinhos
+
+                            <span>→</span>
+
+                        </a>
+
+
+                        <a
+                            href="#sobre"
+                            class="button button-secondary">
+
+                            Conheça a MimoLar
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-benefits">
+
+                        <div class="benefit">
+
+                            <strong>9+</strong>
+
+                            <span>
+                                produtos
+                            </span>
+
+                        </div>
+
+
+                        <div class="benefit">
+
+                            <strong>🏠</strong>
+
+                            <span>
+                                para sua casa
+                            </span>
+
+                        </div>
+
+
+                        <div class="benefit">
+
+                            <strong>✨</strong>
+
+                            <span>
+                                achadinhos
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-decoration"></div>
+
+                        <div class="hero-card-content">
+
+                            <span>
+                                MIMOLAR
+                            </span>
+
+                            <h2>
+                                Sua casa merece
+                                esses mimos.
+                            </h2>
+
+                            <p>
+                                Descubra produtos que podem
+                                deixar seu dia a dia muito mais
+                                prático e aconchegante.
+                            </p>
+
+                            <a href="#produtos">
+                                Explorar produtos →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIAS ================= -->
+
+        <section class="categories" id="categorias">
+
+            <div class="container">
+
+                <div class="section-heading center">
+
+                    <span class="section-label">
+                        EXPLORE
+                    </span>
+
+                    <h2>
+                        Encontre o que procura
+                    </h2>
+
+                    <p>
+                        Navegue pelos nossos achadinhos
+                        e encontre algo para sua casa.
+                    </p>
+
+                </div>
+
+
+                <div class="category-buttons">
+
+                    <button
+                        class="category-button active"
+                        data-category="todos">
+
+                        ✨ Todos
+
+                    </button>
+
+
+                    <button
+                        class="category-button"
+                        data-category="casa">
+
+                        🏠 Casa
+
+                    </button>
+
+
+                    <button
+                        class="category-button"
+                        data-category="cozinha">
+
+                        ☕ Cozinha
+
+                    </button>
+
+
+                    <button
+                        class="category-button"
+                        data-category="organizacao">
+
+                        🧺 Organização
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUTOS ================= -->
+
+        <section class="products-section" id="produtos">
+
+            <div class="container">
+
+
+                <div class="products-header">
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+                            NOSSOS ACHADINHOS
+                        </span>
+
+                        <h2>
+                            Produtos que vale a pena conhecer
+                        </h2>
+
+                        <p>
+                            Selecionamos itens para facilitar
+                            sua rotina e deixar cada cantinho
+                            da casa ainda melhor.
+                        </p>
+
+                    </div>
+
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Buscar produto..."
+                            autocomplete="off">
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================================
+                     GRADE DOS 9 PRODUTOS
+                     ================================================== -->
+
+                <div class="products-grid" id="productsGrid">
+
+
+                    <!-- ================= PRODUTO 1 ================= -->
+
+                    <a
+                        href="https://meli.la/1wxgY7b"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="casa"
+                        data-name="kit 3 tapetes casa">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Mais vendido
+                            </span>
+
+                            <img
+                                src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m76uvfokado235"
+                                alt="Kit com 3 tapetes para casa"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Casa
+                            </span>
+
+                            <h3 class="product-title">
+                                Kit com 3 Tapetes para Casa
+                            </h3>
+
+                            <p class="product-description">
+                                Kit com 3 tapetes para deixar
+                                os ambientes mais bonitos,
+                                confortáveis e aconchegantes.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 39,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ================= PRODUTO 2 ================= -->
+
+                    <a
+                        href="https://meli.la/15WrAKc"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="casa"
+                        data-name="kit 2 travesseiros">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Oferta
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_774639-MLA100083759943_122025-F.webp"
+                                alt="Kit com 2 travesseiros"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Casa
+                            </span>
+
+                            <h3 class="product-title">
+                                Kit com 2 Travesseiros
+                            </h3>
+
+                            <p class="product-description">
+                                Kit com 2 travesseiros para
+                                deixar suas noites de descanso
+                                ainda mais confortáveis.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 34,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ================= PRODUTO 3 ================= -->
+
+                    <a
+                        href="https://meli.la/1K6Cfxc"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="cozinha"
+                        data-name="cafeteira elétrica">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Achadinho
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_923263-MLA99474168604_112025-F.webp"
+                                alt="Cafeteira elétrica"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Cozinha
+                            </span>
+
+                            <h3 class="product-title">
+                                Cafeteira Elétrica
+                            </h3>
+
+                            <p class="product-description">
+                                Praticidade para preparar
+                                aquele café quentinho
+                                sem complicação.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 113,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ================= PRODUTO 4 ================= -->
+
+                    <a
+                        href="https://meli.la/2oh7Kk5"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="casa"
+                        data-name="fechadura eletrônica">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Destaque
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_985748-MLA113670424044_072026-F.webp"
+                                alt="Fechadura eletrônica"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Casa
+                            </span>
+
+                            <h3 class="product-title">
+                                Fechadura Eletrônica
+                            </h3>
+
+                            <p class="product-description">
+                                Mais praticidade para entrar
+                                e sair de casa com uma solução
+                                moderna para sua porta.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 269,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ================= PRODUTO 5 ================= -->
+
+                    <a
+                        href="https://meli.la/1QDaxf2"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="organizacao"
+                        data-name="estante plástica modular">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Oferta
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_917253-MLA113296918629_062026-F.webp"
+                                alt="Estante plástica modular"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Organização
+                            </span>
+
+                            <h3 class="product-title">
+                                Estante Plástica Modular
+                            </h3>
+
+                            <p class="product-description">
+                                Uma solução prática para organizar
+                                objetos e aproveitar melhor
+                                os espaços da casa.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 78,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ================= PRODUTO 6 ================= -->
+
+                    <a
+                        href="https://meli.la/1bnBW2f"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="cozinha"
+                        data-name="churrasqueira elétrica">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Mais vendido
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_630106-MLA116242903927_082026-F.webp"
+                                alt="Churrasqueira elétrica"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Cozinha
+                            </span>
+
+                            <h3 class="product-title">
+                                Churrasqueira Elétrica
+                            </h3>
+
+                            <p class="product-description">
+                                Prepare seus alimentos de forma
+                                prática e aproveite bons momentos
+                                em casa.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 124,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ================= PRODUTO 7 ================= -->
+
+                    <a
+                        href="https://meli.la/1rf7fYv"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="organizacao"
+                        data-name="kit 4 caixas organizadoras">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Mais vendido
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_692222-MLB82403235469_022025-F-4-caixas-organizadora-de-guarda-roupa-cesto-gaveta-dobravel.webp"
+                                alt="Kit com 4 caixas organizadoras"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Organização
+                            </span>
+
+                            <h3 class="product-title">
+                                Kit 4 Caixas Organizadoras
+                            </h3>
+
+                            <p class="product-description">
+                                Kit com 4 caixas dobráveis para
+                                organizar roupas, objetos e
+                                diferentes espaços.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 59,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ================= PRODUTO 8 ================= -->
+
+                    <a
+                        href="https://meli.la/2NmsnRu"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="cozinha"
+                        data-name="sanduicheira elgin">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Oferta
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_787291-MLA114324644258_082026-F.webp"
+                                alt="Sanduicheira Elgin"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Cozinha
+                            </span>
+
+                            <h3 class="product-title">
+                                Sanduicheira Elgin
+                            </h3>
+
+                            <p class="product-description">
+                                Uma opção prática para preparar
+                                sanduíches e lanches rapidamente.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 61,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- ================= PRODUTO 9 ================= -->
+
+                    <a
+                        href="https://meli.la/2cLryxt"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        class="product-card"
+                        data-category="casa"
+                        data-name="cortina blackout">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Destaque
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_725135-MLA99566999760_122025-F.webp"
+                                alt="Cortina blackout"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Casa
+                            </span>
+
+                            <h3 class="product-title">
+                                Cortina Blackout
+                            </h3>
+
+                            <p class="product-description">
+                                Ajude a controlar a entrada de luz
+                                e deixe o ambiente mais confortável.
+                            </p>
+
+
+                            <div class="product-bottom">
+
+                                <div class="product-price">
+
+                                    <small>
+                                        Preço selecionado
+                                    </small>
+
+                                    <strong>
+                                        R$ 78,00
+                                    </strong>
+
+                                </div>
+
+
+                                <span class="product-button">
+                                    Ver produto →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- MENSAGEM QUANDO NÃO ENCONTRAR -->
+
+                <div
+                    class="empty-state"
+                    id="emptyState">
+
+                    <div class="empty-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Nenhum produto encontrado
+                    </h3>
+
+                    <p>
+                        Tente buscar por outro produto
+                        ou categoria.
+                    </p>
+
+                    <button id="clearSearch">
+                        Ver todos os produtos
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BANNER ================= -->
+
+        <section class="mid-banner">
+
+            <div class="container">
+
+                <div class="mid-banner-content">
+
+                    <div>
+
+                        <span>
+                            🏠 MIMOLAR
+                        </span>
+
+                        <h2>
+                            Sua casa merece esses mimos.
+                        </h2>
+
+                        <p>
+                            Produtos simples podem fazer
+                            uma grande diferença na sua rotina.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="#produtos"
+                        class="banner-button">
+
+                        Ver produtos →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SOBRE ================= -->
+
+        <section class="about" id="sobre">
+
+            <div class="container about-grid">
+
+
+                <div class="about-decoration">
+
+                    <div class="about-circle">
+                        🏠
+                    </div>
+
+                    <span class="about-floating one">
+                        ✨
+                    </span>
+
+                    <span class="about-floating two">
+                        🤍
+                    </span>
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <span class="section-label">
+                        SOBRE A MIMOLAR
+                    </span>
+
+
+                    <h2>
+                        Achadinhos escolhidos
+                        para sua casa.
+                    </h2>
+
+
+                    <p>
+                        A MimoLar nasceu para facilitar aquela
+                        busca por produtos legais para casa
+                        que realmente fazem sentido no dia a dia.
+                    </p>
+
+
+                    <p>
+                        Aqui você encontra uma seleção de itens
+                        para cozinha, organização, conforto e
+                        praticidade.
+                    </p>
+
+
+                    <div class="about-list">
+
+                        <div>
+
+                            <span>✓</span>
+
+                            <p>
+                                Produtos úteis para o dia a dia
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>✓</span>
+
+                            <p>
+                                Achadinhos selecionados
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>✓</span>
+
+                            <p>
+                                Acesso direto ao produto
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA FINAL ================= -->
+
+        <section class="final-cta">
+
+            <div class="container">
+
+                <div class="final-cta-box">
+
+                    <span>
+                        ✨ ENCONTRE SEU PRÓXIMO ACHADINHO
+                    </span>
+
+                    <h2>
+                        Tem sempre um mimo esperando por você.
+                    </h2>
+
+                    <a
+                        href="#produtos"
+                        class="button button-light">
+
+                        Explorar produtos →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="#inicio"
+                    class="logo footer-logo">
+
+                    <span class="logo-icon">
+                        M
+                    </span>
+
+                    <span class="logo-text">
+
+                        <strong>
+                            MimoLar
+                        </strong>
+
+                        <small>
+                            achadinhos para casa
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Produtos que deixam sua casa
+                    ainda mais especial.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Navegação
+                </h3>
+
+                <a href="#inicio">
+                    Início
+                </a>
+
+                <a href="#produtos">
+                    Produtos
+                </a>
+
+                <a href="#sobre">
+                    Sobre nós
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Categorias
+                </h3>
+
+                <a href="#produtos">
+                    Casa
+                </a>
+
+                <a href="#produtos">
+                    Cozinha
+                </a>
+
+                <a href="#produtos">
+                    Organização
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 MimoLar. Todos os direitos reservados.
+                </p>
+
+                <p>
+                    Alguns links podem ser links de afiliado.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
