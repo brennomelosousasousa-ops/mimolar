@@ -35,7 +35,9 @@ let currentCategory = "todos";
 let currentSearch = "";
 
 
-/* ================= FILTRAR PRODUTOS ================= */
+/* =====================================================
+   FILTRAR PRODUTOS
+   ===================================================== */
 
 function filterProducts() {
 
@@ -45,10 +47,10 @@ function filterProducts() {
     productCards.forEach(card => {
 
         const category =
-            card.dataset.category;
+            card.dataset.category || "";
 
         const name =
-            card.dataset.name;
+            card.dataset.name || "";
 
 
         const matchesCategory =
@@ -57,9 +59,11 @@ function filterProducts() {
 
 
         const matchesSearch =
-            name.includes(
-                currentSearch.toLowerCase()
-            );
+            name
+                .toLowerCase()
+                .includes(
+                    currentSearch.toLowerCase()
+                );
 
 
         if (
@@ -80,7 +84,7 @@ function filterProducts() {
     });
 
 
-    /* Mostra mensagem caso não encontre */
+    /* EMPTY STATE */
 
     if (visibleProducts === 0) {
 
@@ -95,7 +99,9 @@ function filterProducts() {
 }
 
 
-/* ================= BOTÕES DE CATEGORIA ================= */
+/* =====================================================
+   CATEGORIAS
+   ===================================================== */
 
 categoryButtons.forEach(button => {
 
@@ -103,26 +109,15 @@ categoryButtons.forEach(button => {
         "click",
         () => {
 
+            categoryButtons.forEach(btn => {
 
-            /* Remove ativo de todos */
+                btn.classList.remove("active");
 
-            categoryButtons.forEach(
-                item => {
+            });
 
-                    item.classList.remove(
-                        "active"
-                    );
-
-                }
-            );
-
-
-            /* Ativa botão clicado */
 
             button.classList.add("active");
 
-
-            /* Atualiza categoria */
 
             currentCategory =
                 button.dataset.category;
@@ -136,7 +131,9 @@ categoryButtons.forEach(button => {
 });
 
 
-/* ================= PESQUISA ================= */
+/* =====================================================
+   BUSCA
+   ===================================================== */
 
 if (searchInput) {
 
@@ -145,10 +142,7 @@ if (searchInput) {
         event => {
 
             currentSearch =
-                event.target.value
-                    .toLowerCase()
-                    .trim();
-
+                event.target.value;
 
             filterProducts();
 
@@ -158,7 +152,9 @@ if (searchInput) {
 }
 
 
-/* ================= LIMPAR PESQUISA ================= */
+/* =====================================================
+   LIMPAR BUSCA
+   ===================================================== */
 
 if (clearSearch) {
 
@@ -166,9 +162,9 @@ if (clearSearch) {
         "click",
         () => {
 
-            currentSearch = "";
-
             currentCategory = "todos";
+
+            currentSearch = "";
 
 
             if (searchInput) {
@@ -178,15 +174,11 @@ if (clearSearch) {
             }
 
 
-            categoryButtons.forEach(
-                button => {
+            categoryButtons.forEach(button => {
 
-                    button.classList.remove(
-                        "active"
-                    );
+                button.classList.remove("active");
 
-                }
-            );
+            });
 
 
             const allButton =
@@ -197,9 +189,7 @@ if (clearSearch) {
 
             if (allButton) {
 
-                allButton.classList.add(
-                    "active"
-                );
+                allButton.classList.add("active");
 
             }
 
@@ -212,7 +202,9 @@ if (clearSearch) {
 }
 
 
-/* ================= MENU MOBILE ================= */
+/* =====================================================
+   MENU MOBILE
+   ===================================================== */
 
 if (menuButton && nav) {
 
@@ -226,8 +218,6 @@ if (menuButton && nav) {
     );
 
 
-    /* Fecha menu ao clicar em um link */
-
     nav.querySelectorAll("a")
         .forEach(link => {
 
@@ -235,9 +225,7 @@ if (menuButton && nav) {
                 "click",
                 () => {
 
-                    nav.classList.remove(
-                        "open"
-                    );
+                    nav.classList.remove("open");
 
                 }
             );
@@ -247,43 +235,123 @@ if (menuButton && nav) {
 }
 
 
-/* ================= ANIMAÇÃO DOS PRODUTOS ================= */
+/* =====================================================
+   ANIMAÇÃO DOS PRODUTOS
+   ===================================================== */
 
 productCards.forEach(
     (card, index) => {
 
-        card.animate(
+        card.style.opacity = "0";
 
-            [
-                {
-                    opacity: 0,
-                    transform:
-                        "translateY(15px)"
-                },
+        card.style.transform =
+            "translateY(15px)";
 
-                {
-                    opacity: 1,
-                    transform:
-                        "translateY(0)"
-                }
-            ],
 
-            {
-                duration: 400,
+        setTimeout(
+            () => {
 
-                delay: index * 60,
+                card.style.transition =
+                    "opacity 0.45s ease, transform 0.45s ease";
 
-                easing: "ease-out",
+                card.style.opacity = "1";
 
-                fill: "forwards"
-            }
+                card.style.transform =
+                    "translateY(0)";
 
+            },
+            80 + (index * 50)
         );
 
     }
 );
 
 
-/* ================= INICIALIZAÇÃO ================= */
+/* =====================================================
+   CARROSSEL
+   ===================================================== */
+
+const carouselTrack =
+    document.querySelector(".carousel-track");
+
+
+const carouselDots =
+    document.querySelectorAll(".carousel-dots i");
+
+
+const carouselItems =
+    document.querySelectorAll(".carousel-item");
+
+
+if (
+    carouselTrack &&
+    carouselDots.length &&
+    carouselItems.length
+) {
+
+    function updateCarouselDots() {
+
+        const scrollLeft =
+            carouselTrack.scrollLeft;
+
+        const firstItem =
+            carouselItems[0];
+
+        const itemWidth =
+            firstItem.offsetWidth + 15;
+
+
+        let activeIndex =
+            Math.round(
+                scrollLeft / itemWidth
+            );
+
+
+        if (
+            activeIndex < 0
+        ) {
+            activeIndex = 0;
+        }
+
+
+        if (
+            activeIndex >= carouselDots.length
+        ) {
+            activeIndex =
+                carouselDots.length - 1;
+        }
+
+
+        carouselDots.forEach(
+            (dot, index) => {
+
+                dot.style.opacity =
+                    index === activeIndex
+                        ? "1"
+                        : "0.3";
+
+            }
+        );
+
+    }
+
+
+    carouselTrack.addEventListener(
+        "scroll",
+        updateCarouselDots,
+        {
+            passive: true
+        }
+    );
+
+
+    updateCarouselDots();
+
+}
+
+
+/* =====================================================
+   INICIALIZAÇÃO
+   ===================================================== */
 
 filterProducts();
