@@ -1,24 +1,27 @@
 const searchInput = document.getElementById("searchInput");
-
 const productCards = document.querySelectorAll(".product-card");
 
-const categoryButtons = document.querySelectorAll(".category-button");
+const categoryButtons =
+    document.querySelectorAll(".category-button");
 
-const emptyState = document.getElementById("emptyState");
+const emptyState =
+    document.getElementById("emptyState");
 
-const clearSearch = document.getElementById("clearSearch");
+const clearSearch =
+    document.getElementById("clearSearch");
 
-const menuButton = document.getElementById("menuButton");
+const menuButton =
+    document.getElementById("menuButton");
 
-const nav = document.getElementById("nav");
+const nav =
+    document.getElementById("nav");
 
 
 let currentCategory = "todos";
-
 let currentSearch = "";
 
 
-/* ================= FILTROS ================= */
+/* FILTROS */
 
 function filterProducts() {
 
@@ -26,20 +29,20 @@ function filterProducts() {
 
     productCards.forEach(card => {
 
-        const category = card.dataset.category || "";
+        const category =
+            card.dataset.category;
 
-        const name = card.dataset.name || "";
+        const name =
+            card.dataset.name.toLowerCase();
 
-        const matchesCategory =
+        const categoryMatch =
             currentCategory === "todos" ||
             category === currentCategory;
 
-        const matchesSearch =
-            name.toLowerCase().includes(
-                currentSearch.toLowerCase()
-            );
+        const searchMatch =
+            name.includes(currentSearch);
 
-        if (matchesCategory && matchesSearch) {
+        if (categoryMatch && searchMatch) {
 
             card.classList.remove("hidden");
 
@@ -67,14 +70,14 @@ function filterProducts() {
 }
 
 
-/* ================= CATEGORIAS ================= */
+/* CATEGORIAS */
 
 categoryButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        categoryButtons.forEach(item => {
-            item.classList.remove("active");
+        categoryButtons.forEach(btn => {
+            btn.classList.remove("active");
         });
 
         button.classList.add("active");
@@ -89,101 +92,109 @@ categoryButtons.forEach(button => {
 });
 
 
-/* ================= BUSCA ================= */
+/* BUSCA */
 
-if (searchInput) {
+searchInput.addEventListener("input", event => {
 
-    searchInput.addEventListener("input", event => {
+    currentSearch =
+        event.target.value
+            .toLowerCase()
+            .trim();
 
-        currentSearch =
-            event.target.value.trim();
+    filterProducts();
 
-        filterProducts();
+});
+
+
+/* LIMPAR BUSCA */
+
+clearSearch.addEventListener("click", () => {
+
+    searchInput.value = "";
+
+    currentSearch = "";
+
+    currentCategory = "todos";
+
+    categoryButtons.forEach(button => {
+
+        button.classList.remove("active");
 
     });
 
-}
+    document
+        .querySelector('[data-category="todos"]')
+        .classList.add("active");
+
+    filterProducts();
+
+});
 
 
-/* ================= LIMPAR BUSCA ================= */
+/* MENU MOBILE */
 
-if (clearSearch) {
+menuButton.addEventListener("click", () => {
 
-    clearSearch.addEventListener("click", () => {
+    nav.classList.toggle("open");
 
-        currentSearch = "";
+});
 
-        currentCategory = "todos";
 
-        if (searchInput) {
-            searchInput.value = "";
+/* FECHAR MENU AO CLICAR */
+
+nav.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("open");
+
+    });
+
+});
+
+
+/* ANIMAÇÃO DOS PRODUTOS */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = "1";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.08
         }
+    );
 
-        categoryButtons.forEach(button => {
-
-            button.classList.remove("active");
-
-            if (
-                button.dataset.category === "todos"
-            ) {
-                button.classList.add("active");
-            }
-
-        });
-
-        filterProducts();
-
-    });
-
-}
-
-
-/* ================= MENU MOBILE ================= */
-
-if (menuButton && nav) {
-
-    menuButton.addEventListener("click", () => {
-
-        nav.classList.toggle("open");
-
-    });
-
-
-    nav.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            nav.classList.remove("open");
-
-        });
-
-    });
-
-}
-
-
-/* ================= ANIMAÇÃO DOS PRODUTOS ================= */
 
 productCards.forEach((card, index) => {
 
     card.style.opacity = "0";
 
-    card.style.transform = "translateY(15px)";
+    card.style.transform =
+        "translateY(15px)";
 
-    setTimeout(() => {
+    card.style.transition =
+        `opacity .5s ease ${index * 0.025}s,
+         transform .5s ease ${index * 0.025}s`;
 
-        card.style.transition =
-            "opacity 0.5s ease, transform 0.5s ease";
-
-        card.style.opacity = "1";
-
-        card.style.transform = "translateY(0)";
-
-    }, Math.min(index * 50, 600));
+    observer.observe(card);
 
 });
 
 
-/* ================= INICIAR ================= */
+/* INICIALIZA */
 
 filterProducts();
