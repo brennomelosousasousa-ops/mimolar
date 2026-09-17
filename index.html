@@ -2,20 +2,22 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="MimoLar — achadinhos para deixar sua casa mais bonita, organizada e prática.">
+
+    <meta name="theme-color" content="#123b5d">
 
     <title>MimoLar | Achadinhos para sua casa</title>
 
-    <meta name="description"
-        content="Achadinhos para casa, cozinha, organização e muito mais. Encontre produtos úteis com ótimos preços.">
-
-    <link rel="icon" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -23,1062 +25,1604 @@
 
 <body>
 
-<header class="header">
-    <div class="container header-content">
+    <!-- ================= HEADER ================= -->
 
-        <a href="#" class="logo">
-            <span class="logo-icon">M</span>
-            <span>Mimo<span>Lar</span></span>
-        </a>
+    <header class="header">
 
-        <button class="menu-button" id="menuButton">
-            ☰
-        </button>
+        <div class="container header-content">
 
-        <nav class="nav" id="nav">
-            <a href="#inicio">Início</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#sobre">Sobre</a>
-        </nav>
+            <a href="#" class="logo">
+                <span class="logo-icon">M</span>
 
-    </div>
-</header>
+                <span class="logo-text">
+                    <strong>Mimo</strong><span>Lar</span>
+                </span>
+            </a>
 
+            <nav class="nav" id="nav">
 
-<main>
+                <a href="#inicio">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
 
-<section class="hero" id="inicio">
-
-    <div class="container hero-content">
-
-        <div class="hero-text">
-
-            <span class="eyebrow">
-                ✨ ACHADINHOS MIMOLAR
-            </span>
-
-            <h1>
-                Pequenos detalhes que
-                <span>transformam sua casa.</span>
-            </h1>
-
-            <p>
-                Produtos úteis, bonitos e com preços que cabem no bolso.
-                Descubra seus próximos achadinhos favoritos.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#produtos" class="btn-primary">
-                    Ver produtos
-                    <span>→</span>
+                <a href="#produtos" class="nav-button">
+                    Ver achadinhos
                 </a>
 
-                <a href="#sobre" class="btn-secondary">
-                    Conheça a MimoLar
-                </a>
+            </nav>
 
-            </div>
-
-            <div class="hero-benefits">
-
-                <div>
-                    <strong>27+</strong>
-                    <span>produtos</span>
-                </div>
-
-                <div>
-                    <strong>4</strong>
-                    <span>categorias</span>
-                </div>
-
-                <div>
-                    <strong>♡</strong>
-                    <span>achadinhos</span>
-                </div>
-
-            </div>
+            <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+                ☰
+            </button>
 
         </div>
 
-
-        <div class="hero-visual">
-
-            <div class="hero-carousel">
-
-                <div class="carousel-header">
-
-                    <span>ESCOLHAS MIMOLAR</span>
-
-                    <strong>
-                        Achadinhos que valem conhecer
-                    </strong>
-
-                </div>
+    </header>
 
 
-                <div class="carousel-track">
+    <!-- ================= HERO ================= -->
 
-                    <a href="https://meli.la/1Gi3rnP"
-                       target="_blank"
-                       rel="noopener noreferrer sponsored"
-                       class="carousel-item">
+    <main>
 
-                        <img
-                            src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80"
-                            alt="Luminária">
+        <section class="hero" id="inicio">
 
-                        <div class="carousel-info">
-                            <span>Casa</span>
-                            <strong>Luminárias de Emergência</strong>
-                            <small>R$ 37,00</small>
-                        </div>
+            <div class="container hero-grid">
 
-                    </a>
+                <div class="hero-content">
 
-
-                    <a href="https://meli.la/1K6Cfxc"
-                       target="_blank"
-                       rel="noopener noreferrer sponsored"
-                       class="carousel-item">
-
-                        <img
-                            src="https://http2.mlstatic.com/D_NQ_NP_2X_923263-MLA99474168604_112025-F.webp"
-                            alt="Cafeteira elétrica">
-
-                        <div class="carousel-info">
-                            <span>Cozinha</span>
-                            <strong>Cafeteira Elétrica</strong>
-                            <small>R$ 113,00</small>
-                        </div>
-
-                    </a>
-
-
-                    <a href="https://meli.la/1B5tVnP"
-                       target="_blank"
-                       rel="noopener noreferrer sponsored"
-                       class="carousel-item">
-
-                        <img
-                            src="https://http2.mlstatic.com/D_NQ_NP_2X_828771-MLB115353170222_082026-F-cabeceira-queen-160cm-cama-box-kit-8-modulos-adesivo-dubai.webp"
-                            alt="Cabeceira Queen">
-
-                        <div class="carousel-info">
-                            <span>Casa</span>
-                            <strong>Cabeceira Queen</strong>
-                            <small>R$ 44,00</small>
-                        </div>
-
-                    </a>
-
-
-                    <a href="https://meli.la/1TkEL9P"
-                       target="_blank"
-                       rel="noopener noreferrer sponsored"
-                       class="carousel-item">
-
-                        <img
-                            src="https://http2.mlstatic.com/D_NQ_NP_2X_927129-MLA112699030614_062026-F.webp"
-                            alt="Torneira gourmet">
-
-                        <div class="carousel-info">
-                            <span>Cozinha</span>
-                            <strong>Torneira Gourmet</strong>
-                            <small>R$ 64,00</small>
-                        </div>
-
-                    </a>
-
-
-                    <a href="https://meli.la/2j8FxsF"
-                       target="_blank"
-                       rel="noopener noreferrer sponsored"
-                       class="carousel-item">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=800&q=80"
-                            alt="Smart TV Philco 32 polegadas">
-
-                        <div class="carousel-info">
-                            <span>Eletrônicos</span>
-                            <strong>Smart TV Philco 32"</strong>
-                            <small>R$ 949,00</small>
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <div class="carousel-bottom">
-
-                    <span>
-                        Arraste para explorar →
+                    <span class="eyebrow">
+                        ✨ ACHADINHOS PARA SUA CASA
                     </span>
 
-                    <div class="carousel-dots">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
+                    <h1>
+                        Pequenos detalhes
+                        <span>fazem toda diferença.</span>
+                    </h1>
+
+                    <p>
+                        Produtos escolhidos para deixar sua casa mais
+                        bonita, organizada, prática e aconchegante.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#produtos" class="primary-button">
+                            Explorar produtos
+                            <span>→</span>
+                        </a>
+
+                        <a href="#sobre" class="secondary-button">
+                            Conheça a MimoLar
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div>
+                            <strong>27+</strong>
+                            <span>achadinhos</span>
+                        </div>
+
+                        <div>
+                            <strong>4</strong>
+                            <span>categorias</span>
+                        </div>
+
+                        <div>
+                            <strong>24h</strong>
+                            <span>novidades</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARROSSEL -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-carousel">
+
+                        <div class="carousel-header">
+
+                            <span>
+                                ✨ ACHADINHOS MIMOLAR
+                            </span>
+
+                            <strong>
+                                Escolhas para sua casa
+                            </strong>
+
+                        </div>
+
+
+                        <div class="carousel-track">
+
+                            <a href="https://meli.la/1wxgY7b"
+                               target="_blank"
+                               rel="noopener noreferrer sponsored"
+                               class="carousel-item">
+
+                                <img
+                                    src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m76uvfokado235"
+                                    alt="Kit com 3 tapetes">
+
+                                <div class="carousel-info">
+
+                                    <span>Casa</span>
+
+                                    <strong>
+                                        Kit com 3 Tapetes
+                                    </strong>
+
+                                    <small>
+                                        R$ 39,00
+                                    </small>
+
+                                </div>
+
+                            </a>
+
+
+                            <a href="https://meli.la/1K6Cfxc"
+                               target="_blank"
+                               rel="noopener noreferrer sponsored"
+                               class="carousel-item">
+
+                                <img
+                                    src="https://http2.mlstatic.com/D_NQ_NP_2X_923263-MLA99474168604_112025-F.webp"
+                                    alt="Cafeteira elétrica">
+
+                                <div class="carousel-info">
+
+                                    <span>Cozinha</span>
+
+                                    <strong>
+                                        Cafeteira Elétrica
+                                    </strong>
+
+                                    <small>
+                                        R$ 113,00
+                                    </small>
+
+                                </div>
+
+                            </a>
+
+
+                            <a href="https://meli.la/1TkEL9P"
+                               target="_blank"
+                               rel="noopener noreferrer sponsored"
+                               class="carousel-item">
+
+                                <img
+                                    src="https://http2.mlstatic.com/D_NQ_NP_2X_927129-MLA112699030614_062026-F.webp"
+                                    alt="Torneira gourmet">
+
+                                <div class="carousel-info">
+
+                                    <span>Cozinha</span>
+
+                                    <strong>
+                                        Torneira Gourmet
+                                    </strong>
+
+                                    <small>
+                                        R$ 64,00
+                                    </small>
+
+                                </div>
+
+                            </a>
+
+
+                            <a href="https://meli.la/2b2Jo9C"
+                               target="_blank"
+                               rel="noopener noreferrer sponsored"
+                               class="carousel-item">
+
+                                <img
+                                    src="https://http2.mlstatic.com/D_NQ_NP_2X_850830-MLB116097001565_082026-F-copo-termico-gigante-12l-inox-com-tampa-e-inox-canudo.webp"
+                                    alt="Copo térmico 1,2 litros">
+
+                                <div class="carousel-info">
+
+                                    <span>Cozinha</span>
+
+                                    <strong>
+                                        Copo Térmico 1,2L
+                                    </strong>
+
+                                    <small>
+                                        R$ 46,00
+                                    </small>
+
+                                </div>
+
+                            </a>
+
+
+                            <a href="https://meli.la/1B5tVnP"
+                               target="_blank"
+                               rel="noopener noreferrer sponsored"
+                               class="carousel-item">
+
+                                <img
+                                    src="https://http2.mlstatic.com/D_NQ_NP_2X_828771-MLB115353170222_082026-F-cabeceira-queen-160cm-cama-box-kit-8-modulos-adesivo-dubai.webp"
+                                    alt="Cabeceira Queen">
+
+                                <div class="carousel-info">
+
+                                    <span>Casa</span>
+
+                                    <strong>
+                                        Cabeceira Queen
+                                    </strong>
+
+                                    <small>
+                                        R$ 44,00
+                                    </small>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="carousel-bottom">
+
+                            <span>
+                                Arraste para explorar →
+                            </span>
+
+                            <div class="carousel-dots">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
+        <!-- ================= CATEGORIAS ================= -->
 
-<section class="products-section" id="produtos">
+        <section class="categories-section">
 
-    <div class="container">
+            <div class="container">
 
-        <div class="section-heading">
+                <div class="section-heading">
 
-            <div>
-                <span class="eyebrow">NOSSA SELEÇÃO</span>
+                    <div>
+                        <span class="eyebrow">
+                            EXPLORE
+                        </span>
 
-                <h2>
-                    Achadinhos para você
-                </h2>
+                        <h2>
+                            Encontre o que procura
+                        </h2>
+                    </div>
+
+                    <p>
+                        Achadinhos separados por categoria para
+                        facilitar sua busca.
+                    </p>
+
+                </div>
+
+
+                <div class="category-buttons">
+
+                    <button
+                        class="category-button active"
+                        data-category="todos">
+
+                        Todos
+
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="casa">
+
+                        🏠 Casa
+
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="cozinha">
+
+                        ☕ Cozinha
+
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="organizacao">
+
+                        🧺 Organização
+
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="eletronicos">
+
+                        📺 Eletrônicos
+
+                    </button>
+
+                </div>
+
             </div>
 
-            <p>
-                Encontre produtos úteis para deixar sua casa
-                mais prática, organizada e confortável.
-            </p>
-
-        </div>
+        </section>
 
 
-        <div class="filters">
+        <!-- ================= PRODUTOS ================= -->
 
-            <div class="categories">
+        <section class="products-section" id="produtos">
 
-                <button class="category-button active" data-category="todos">
-                    Todos
-                </button>
+            <div class="container">
 
-                <button class="category-button" data-category="casa">
+                <div class="products-top">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            SELEÇÃO MIMOLAR
+                        </span>
+
+                        <h2>
+                            Achadinhos da vez
+                        </h2>
+
+                    </div>
+
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Buscar produto..."
+                            autocomplete="off">
+
+                    </div>
+
+                </div>
+
+
+                <div class="products-grid" id="productsGrid">
+
+
+                    <!-- 1 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="kit 3 tapetes"
+                       href="https://meli.la/1wxgY7b"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m76uvfokado235"
+                                alt="Kit com 3 tapetes">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Kit com 3 Tapetes
+                            </h3>
+
+                            <strong>
+                                R$ 39,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 2 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="kit 2 travesseiros"
+                       href="https://meli.la/15WrAKc"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_774639-MLA100083759943_122025-F.webp"
+                                alt="Kit com 2 travesseiros">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Kit 2 Travesseiros
+                            </h3>
+
+                            <strong>
+                                R$ 34,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 3 -->
+
+                    <a class="product-card"
+                       data-category="cozinha"
+                       data-name="cafeteira elétrica"
+                       href="https://meli.la/1K6Cfxc"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_923263-MLA99474168604_112025-F.webp"
+                                alt="Cafeteira elétrica">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Cozinha</span>
+
+                            <h3>
+                                Cafeteira Elétrica
+                            </h3>
+
+                            <strong>
+                                R$ 113,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 4 -->
+
+                    <a class="product-card"
+                       data-category="eletronicos"
+                       data-name="fechadura eletrônica"
+                       href="https://meli.la/2oh7Kk5"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_985748-MLA113670424044_072026-F.webp"
+                                alt="Fechadura eletrônica">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Eletrônicos</span>
+
+                            <h3>
+                                Fechadura Eletrônica
+                            </h3>
+
+                            <strong>
+                                R$ 269,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 5 -->
+
+                    <a class="product-card"
+                       data-category="organizacao"
+                       data-name="estante plástica modular"
+                       href="https://meli.la/1QDaxf2"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_917253-MLA113296918629_062026-F.webp"
+                                alt="Estante plástica modular">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Organização</span>
+
+                            <h3>
+                                Estante Plástica Modular
+                            </h3>
+
+                            <strong>
+                                R$ 78,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 6 -->
+
+                    <a class="product-card"
+                       data-category="cozinha"
+                       data-name="churrasqueira elétrica"
+                       href="https://meli.la/1bnBW2f"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_630106-MLA116242903927_082026-F.webp"
+                                alt="Churrasqueira elétrica">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Cozinha</span>
+
+                            <h3>
+                                Churrasqueira Elétrica
+                            </h3>
+
+                            <strong>
+                                R$ 124,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 7 -->
+
+                    <a class="product-card"
+                       data-category="organizacao"
+                       data-name="kit 4 caixas organizadoras guarda roupa"
+                       href="https://meli.la/1rf7fYv"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_692222-MLB82403235469_022025-F-4-caixas-organizadora-de-guarda-roupa-cesto-gaveta-dobravel.webp"
+                                alt="Kit 4 caixas organizadoras">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Organização</span>
+
+                            <h3>
+                                Kit 4 Caixas Organizadoras
+                            </h3>
+
+                            <strong>
+                                R$ 59,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 8 -->
+
+                    <a class="product-card"
+                       data-category="cozinha"
+                       data-name="sanduicheira elgin"
+                       href="https://meli.la/2NmsnRu"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_787291-MLA114324644258_082026-F.webp"
+                                alt="Sanduicheira Elgin">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Cozinha</span>
+
+                            <h3>
+                                Sanduicheira Elgin
+                            </h3>
+
+                            <strong>
+                                R$ 61,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 9 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="cortina blackout"
+                       href="https://meli.la/2cLryxt"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_725135-MLA99566999760_122025-F.webp"
+                                alt="Cortina blackout">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Cortina Blackout
+                            </h3>
+
+                            <strong>
+                                R$ 78,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 10 -->
+
+                    <a class="product-card"
+                       data-category="cozinha"
+                       data-name="torneira gourmet"
+                       href="https://meli.la/1TkEL9P"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_927129-MLA112699030614_062026-F.webp"
+                                alt="Torneira gourmet">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Cozinha</span>
+
+                            <h3>
+                                Torneira Gourmet
+                            </h3>
+
+                            <strong>
+                                R$ 64,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 11 -->
+
+                    <a class="product-card"
+                       data-category="cozinha"
+                       data-name="copo térmico 1.2 litros"
+                       href="https://meli.la/2b2Jo9C"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_850830-MLB116097001565_082026-F-copo-termico-gigante-12l-inox-com-tampa-e-inox-canudo.webp"
+                                alt="Copo térmico 1,2 litros">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Cozinha</span>
+
+                            <h3>
+                                Copo Térmico 1,2L
+                            </h3>
+
+                            <strong>
+                                R$ 46,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 12 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="cabeceira queen"
+                       href="https://meli.la/1B5tVnP"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_828771-MLB115353170222_082026-F-cabeceira-queen-160cm-cama-box-kit-8-modulos-adesivo-dubai.webp"
+                                alt="Cabeceira Queen">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Cabeceira Queen
+                            </h3>
+
+                            <strong>
+                                R$ 44,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 13 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="kit 10 painel mármore"
+                       href="https://meli.la/2XJ1NWm"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_789257-MLB88796787666_082025-F-kit-10-painel-3d-marmore-parede-autocolante-60-x-30-pdeals.webp"
+                                alt="Kit 10 painéis de mármore">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Kit 10 Painéis Mármore
+                            </h3>
+
+                            <strong>
+                                R$ 37,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 14 -->
+
+                    <a class="product-card"
+                       data-category="organizacao"
+                       data-name="escorredor de louça 2 andares"
+                       href="https://meli.la/1qmgJkC"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_864356-MLA107763031870_032026-F.webp"
+                                alt="Escorredor de louça 2 andares">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Organização</span>
+
+                            <h3>
+                                Escorredor de Louça 2 Andares
+                            </h3>
+
+                            <strong>
+                                R$ 107,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 15 -->
+
+                    <a class="product-card"
+                       data-category="organizacao"
+                       data-name="organizadora multiuso"
+                       href="https://meli.la/2UBwJWG"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_905044-MLA100084965387_122025-F.webp"
+                                alt="Organizadora multiuso">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Organização</span>
+
+                            <h3>
+                                Organizadora Multiuso
+                            </h3>
+
+                            <strong>
+                                R$ 32,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 16 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="varal inox 50 prendedores"
+                       href="https://meli.la/1evyJXE"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_684225-MLA108361334797_032026-F-varal-inox-suspenso-40-prendedores-fixos-para-secagem-roupas.webp"
+                                alt="Varal inox com prendedores">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Varal Inox com 50 Prendedores
+                            </h3>
+
+                            <strong>
+                                R$ 27,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 17 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="kit 6 pares meia puma"
+                       href="https://meli.la/2QFKCS8"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_617361-MLB54128842596_032023-F-kit-6-pares-meias-puma-cano-medio-alto-atoalhada-original.webp"
+                                alt="Kit 6 pares de meias Puma">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Outros</span>
+
+                            <h3>
+                                Kit 6 Pares de Meia Puma
+                            </h3>
+
+                            <strong>
+                                R$ 66,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 18 -->
+
+                    <a class="product-card"
+                       data-category="cozinha"
+                       data-name="espremedor premium mundial"
+                       href="https://meli.la/138Kyd9"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_852738-MLA99700511468_122025-F.webp"
+                                alt="Espremedor premium Mundial">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Cozinha</span>
+
+                            <h3>
+                                Espremedor Premium Mundial
+                            </h3>
+
+                            <strong>
+                                R$ 75,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 19 -->
+
+                    <a class="product-card"
+                       data-category="eletronicos"
+                       data-name="bomba de garrafão elétrica"
+                       href="https://meli.la/1trht2r"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_888361-MLA101186821323_122025-F.webp"
+                                alt="Bomba elétrica para garrafão">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Eletrônicos</span>
+
+                            <h3>
+                                Bomba de Garrafão Elétrica
+                            </h3>
+
+                            <strong>
+                                R$ 19,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 20 -->
+
+                    <a class="product-card"
+                       data-category="organizacao"
+                       data-name="arara prateleira organizadora 5 andares"
+                       href="https://meli.la/2fEmB4C"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_886186-MLA101182531366_122025-F.webp"
+                                alt="Arara organizadora 5 andares">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Organização</span>
+
+                            <h3>
+                                Arara Organizadora 5 Andares
+                            </h3>
+
+                            <strong>
+                                R$ 37,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 21 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="3 luminarias de emergencia"
+                       href="https://meli.la/1Gi3rnP"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_728815-MLA100081720055_122025-F.webp"
+                                alt="3 luminárias de emergência">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Kit 3 Luminárias de Emergência
+                            </h3>
+
+                            <strong>
+                                R$ 37,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 22 -->
+
+                    <a class="product-card"
+                       data-category="organizacao"
+                       data-name="prateleira adesiva banheiro"
+                       href="https://meli.la/32P8fzt"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_883924-MLA112321976543_052026-F.webp"
+                                alt="Prateleira adesiva para banheiro">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Organização</span>
+
+                            <h3>
+                                Prateleira Adesiva para Banheiro
+                            </h3>
+
+                            <strong>
+                                R$ 31,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 23 -->
+
+                    <a class="product-card"
+                       data-category="cozinha"
+                       data-name="kit pipoqueira silicone retratil"
+                       href="https://meli.la/1qycM1p"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_665778-MLA114716723047_072026-F.webp"
+                                alt="Kit pipoqueira de silicone retrátil">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Cozinha</span>
+
+                            <h3>
+                                Kit Pipoqueira de Silicone Retrátil
+                            </h3>
+
+                            <strong>
+                                R$ 33,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 24 -->
+
+                    <a class="product-card featured-product"
+                       data-category="eletronicos"
+                       data-name="smart tv philco 32 polegadas"
+                       href="https://meli.la/2j8FxsF"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <span class="featured-badge">
+                                DESTAQUE
+                            </span>
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_875689-MLA107805437119_022026-F.webp"
+                                alt="Smart TV Philco 32 polegadas">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Eletrônicos</span>
+
+                            <h3>
+                                Smart TV Philco 32"
+                            </h3>
+
+                            <strong>
+                                R$ 949,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 25 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="capa protetora colchao box"
+                       href="https://meli.la/1kVPq76"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_639258-MLB82839590542_032025-F-capa-protetora-colcho-box-casal-padro-matelado-impermeavel.webp"
+                                alt="Capa protetora para colchão box">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Capa Protetora para Colchão Box
+                            </h3>
+
+                            <strong>
+                                R$ 27,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 26 -->
+
+                    <a class="product-card"
+                       data-category="cozinha"
+                       data-name="triturador de alimentos"
+                       href="https://meli.la/1K5uZQL"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_766622-MLA104616859908_012026-F.webp"
+                                alt="Triturador de alimentos">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Cozinha</span>
+
+                            <h3>
+                                Triturador de Alimentos
+                            </h3>
+
+                            <strong>
+                                R$ 18,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 27 -->
+
+                    <a class="product-card"
+                       data-category="casa"
+                       data-name="kit acessorios banheiro"
+                       href="https://meli.la/2gNThtt"
+                       target="_blank"
+                       rel="noopener noreferrer sponsored">
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://http2.mlstatic.com/D_NQ_NP_2X_834616-MLA114539313408_082026-F.webp"
+                                alt="Kit acessórios para banheiro">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>Casa</span>
+
+                            <h3>
+                                Kit Acessórios para Banheiro
+                            </h3>
+
+                            <strong>
+                                R$ 69,00
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- ESTADO VAZIO -->
+
+                <div class="empty-state" id="emptyState">
+
+                    <div class="empty-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Nenhum produto encontrado
+                    </h3>
+
+                    <p>
+                        Tente pesquisar por outro termo ou categoria.
+                    </p>
+
+                    <button id="clearSearch">
+                        Limpar filtros
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BANNER ================= -->
+
+        <section class="promo-section">
+
+            <div class="container">
+
+                <div class="promo-banner">
+
+                    <div>
+
+                        <span>
+                            ✨ MIMOLAR
+                        </span>
+
+                        <h2>
+                            Sua casa merece
+                            aquele toque especial.
+                        </h2>
+
+                        <p>
+                            Descubra produtos que podem transformar
+                            pequenos espaços do seu dia a dia.
+                        </p>
+
+                    </div>
+
+                    <a href="#produtos">
+                        Ver produtos →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SOBRE ================= -->
+
+        <section class="about-section" id="sobre">
+
+            <div class="container about-grid">
+
+                <div class="about-image">
+
+                    <div class="about-card">
+
+                        <span>
+                            M
+                        </span>
+
+                        <strong>
+                            MimoLar
+                        </strong>
+
+                        <small>
+                            Achadinhos para sua casa
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span class="eyebrow">
+                        SOBRE A MIMOLAR
+                    </span>
+
+                    <h2>
+                        Encontramos os achadinhos.
+                        Você escolhe seus favoritos.
+                    </h2>
+
+                    <p>
+                        A MimoLar reúne produtos encontrados em
+                        marketplaces para facilitar sua busca por
+                        itens úteis, bonitos e interessantes para sua casa.
+                    </p>
+
+                    <p>
+                        Nossa seleção é pensada para quem gosta de
+                        descobrir produtos diferentes sem precisar
+                        ficar horas procurando.
+                    </p>
+
+                    <div class="about-features">
+
+                        <div>
+                            <span>✓</span>
+                            <p>
+                                Produtos selecionados
+                            </p>
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            <p>
+                                Categorias organizadas
+                            </p>
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            <p>
+                                Links diretos para compra
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <span class="eyebrow">
+                        NÃO PERCA NENHUM ACHADINHO
+                    </span>
+
+                    <h2>
+                        Tem novidade chegando por aqui.
+                    </h2>
+
+                    <p>
+                        Continue acompanhando a MimoLar para descobrir
+                        novos produtos e ofertas.
+                    </p>
+
+                    <a href="#produtos" class="primary-button">
+                        Explorar agora
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+
+                    <span class="logo-icon">
+                        M
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>Mimo</strong><span>Lar</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Achadinhos para deixar sua casa
+                    mais bonita, prática e aconchegante.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Navegação
+                </h3>
+
+                <a href="#inicio">
+                    Início
+                </a>
+
+                <a href="#produtos">
+                    Produtos
+                </a>
+
+                <a href="#sobre">
+                    Sobre
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Categorias
+                </h3>
+
+                <a href="#produtos">
                     Casa
-                </button>
+                </a>
 
-                <button class="category-button" data-category="cozinha">
+                <a href="#produtos">
                     Cozinha
-                </button>
+                </a>
 
-                <button class="category-button" data-category="organizacao">
+                <a href="#produtos">
                     Organização
-                </button>
+                </a>
 
-                <button class="category-button" data-category="eletronicos">
+                <a href="#produtos">
                     Eletrônicos
-                </button>
+                </a>
 
             </div>
 
 
-            <div class="search-box">
+            <div class="footer-column">
 
-                <span>⌕</span>
+                <h3>
+                    MimoLar
+                </h3>
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Buscar produto..."
-                    autocomplete="off">
+                <p>
+                    Selecionamos produtos de
+                    diferentes marketplaces.
+                </p>
 
             </div>
 
         </div>
 
 
-        <div class="product-grid" id="productGrid">
+        <div class="container footer-bottom">
 
-
-            <!-- 1 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="kit 3 tapetes"
-               href="https://meli.la/1wxgY7b"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m76uvfokado235"
-                         alt="Kit 3 tapetes">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Kit com 3 Tapetes</h3>
-                    <strong>R$ 39,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 2 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="kit 2 travesseiros"
-               href="https://meli.la/15WrAKc"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_774639-MLA100083759943_122025-F.webp"
-                         alt="Kit 2 travesseiros">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Kit 2 Travesseiros</h3>
-                    <strong>R$ 34,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 3 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="cafeteira elétrica"
-               href="https://meli.la/1K6Cfxc"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_923263-MLA99474168604_112025-F.webp"
-                         alt="Cafeteira elétrica">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Cafeteira Elétrica</h3>
-                    <strong>R$ 113,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 4 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="fechadura eletrônica"
-               href="https://meli.la/2oh7Kk5"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_985748-MLA113670424044_072026-F.webp"
-                         alt="Fechadura eletrônica">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Fechadura Eletrônica</h3>
-                    <strong>R$ 269,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 5 -->
-            <a class="product-card"
-               data-category="organizacao"
-               data-name="estante plástica modular"
-               href="https://meli.la/1QDaxf2"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_917253-MLA113296918629_062026-F.webp"
-                         alt="Estante plástica modular">
-                </div>
-
-                <div class="product-info">
-                    <span>Organização</span>
-                    <h3>Estante Plástica Modular</h3>
-                    <strong>R$ 78,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 6 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="churrasqueira elétrica"
-               href="https://meli.la/1bnBW2f"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_630106-MLA116242903927_082026-F.webp"
-                         alt="Churrasqueira elétrica">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Churrasqueira Elétrica</h3>
-                    <strong>R$ 124,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 7 -->
-            <a class="product-card"
-               data-category="organizacao"
-               data-name="kit 4 caixas organizadoras guarda roupa"
-               href="https://meli.la/1rf7fYv"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_692222-MLB82403235469_022025-F-4-caixas-organizadora-de-guarda-roupa-cesto-gaveta-dobravel.webp"
-                         alt="Kit 4 caixas organizadoras">
-                </div>
-
-                <div class="product-info">
-                    <span>Organização</span>
-                    <h3>Kit 4 Caixas Organizadoras</h3>
-                    <strong>R$ 59,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 8 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="sanduicheira elgin"
-               href="https://meli.la/2NmsnRu"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_787291-MLA114324644258_082026-F.webp"
-                         alt="Sanduicheira Elgin">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Sanduicheira Elgin</h3>
-                    <strong>R$ 61,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 9 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="cortina blackout"
-               href="https://meli.la/2cLryxt"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_725135-MLA99566999760_122025-F.webp"
-                         alt="Cortina blackout">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Cortina Blackout</h3>
-                    <strong>R$ 78,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 10 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="torneira gourmet"
-               href="https://meli.la/1TkEL9P"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_927129-MLA112699030614_062026-F.webp"
-                         alt="Torneira gourmet">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Torneira Gourmet</h3>
-                    <strong>R$ 64,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 11 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="copo térmico stanley 1,2 litros"
-               href="https://meli.la/2b2Jo9C"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_850830-MLB116097001565_082026-F-copo-termico-gigante-12l-inox-com-tampa-e-inox-canudo.webp"
-                         alt="Copo térmico 1,2 litros">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Copo Térmico 1,2L</h3>
-                    <strong>R$ 46,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 12 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="cabeceira queen"
-               href="https://meli.la/1B5tVnP"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_828771-MLB115353170222_082026-F-cabeceira-queen-160cm-cama-box-kit-8-modulos-adesivo-dubai.webp"
-                         alt="Cabeceira Queen">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Cabeceira Queen</h3>
-                    <strong>R$ 44,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 13 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="kit 10 painel mármore"
-               href="https://meli.la/2XJ1NWm"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_789257-MLB88796787666_082025-F-kit-10-painel-3d-marmore-parede-autocolante-60-x-30-pdeals.webp"
-                         alt="Kit painel mármore">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Kit 10 Painéis Mármore</h3>
-                    <strong>R$ 37,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 14 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="escorredor de louça 2 andares"
-               href="https://meli.la/1qmgJkC"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_864356-MLA107763031870_032026-F.webp"
-                         alt="Escorredor de louça">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Escorredor 2 Andares</h3>
-                    <strong>R$ 107,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 15 -->
-            <a class="product-card"
-               data-category="organizacao"
-               data-name="organizadora multiuso"
-               href="https://meli.la/2UBwJWG"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_905044-MLA100084965387_122025-F.webp"
-                         alt="Organizadora multiuso">
-                </div>
-
-                <div class="product-info">
-                    <span>Organização</span>
-                    <h3>Organizadora Multiuso</h3>
-                    <strong>R$ 32,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 16 -->
-            <a class="product-card"
-               data-category="organizacao"
-               data-name="varal inox 50 prendedores"
-               href="https://meli.la/1evyJXE"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_684225-MLA108361334797_032026-F-varal-inox-suspenso-40-prendedores-fixos-para-secagem-roupas.webp"
-                         alt="Varal inox">
-                </div>
-
-                <div class="product-info">
-                    <span>Organização</span>
-                    <h3>Varal Inox com Prendedores</h3>
-                    <strong>R$ 27,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 17 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="kit 6 pares meia puma cano alto"
-               href="https://meli.la/2QFKCS8"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_617361-MLB54128842596_032023-F-kit-6-pares-meias-puma-cano-medio-alto-atoalhada-original.webp"
-                         alt="Kit 6 pares de meias Puma">
-                </div>
-
-                <div class="product-info">
-                    <span>Outros</span>
-                    <h3>Kit 6 Pares de Meia Puma</h3>
-                    <strong>R$ 66,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 18 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="espremedor premium mundial"
-               href="https://meli.la/138Kyd9"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_852738-MLA99700511468_122025-F.webp"
-                         alt="Espremedor Premium Mundial">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Espremedor Premium Mundial</h3>
-                    <strong>R$ 75,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 19 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="bomba garrafão elétrica"
-               href="https://meli.la/1trht2r"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_888361-MLA101186821323_122025-F.webp"
-                         alt="Bomba de garrafão elétrica">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Bomba de Garrafão Elétrica</h3>
-                    <strong>R$ 19,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 20 -->
-            <a class="product-card"
-               data-category="organizacao"
-               data-name="arara prateleira organizadora 5 andares"
-               href="https://meli.la/2fEmB4C"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_886186-MLA101182531366_122025-F.webp"
-                         alt="Arara organizadora">
-                </div>
-
-                <div class="product-info">
-                    <span>Organização</span>
-                    <h3>Arara Organizadora 5 Andares</h3>
-                    <strong>R$ 37,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 21 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="3 luminarias de emergencia"
-               href="https://meli.la/1Gi3rnP"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80"
-                         alt="3 luminárias de emergência">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Kit 3 Luminárias de Emergência</h3>
-                    <strong>R$ 37,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 22 -->
-            <a class="product-card"
-               data-category="organizacao"
-               data-name="prateleira adesiva banheiro"
-               href="https://meli.la/32P8fzt"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80"
-                         alt="Prateleira adesiva para banheiro">
-                </div>
-
-                <div class="product-info">
-                    <span>Organização</span>
-                    <h3>Prateleira Adesiva para Banheiro</h3>
-                    <strong>R$ 31,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 23 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="kit pipoqueira silicone retratil"
-               href="https://meli.la/1qycM1p"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1578849278619-6e4c6f3c1c2d?auto=format&fit=crop&w=800&q=80"
-                         alt="Pipoqueira de silicone retrátil">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Kit Pipoqueira de Silicone Retrátil</h3>
-                    <strong>R$ 33,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 24 -->
-            <a class="product-card featured-product"
-               data-category="eletronicos"
-               data-name="smart tv philco 32 polegadas"
-               href="https://meli.la/2j8FxsF"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <span class="featured-badge">DESTAQUE</span>
-
-                    <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=800&q=80"
-                         alt="Smart TV Philco 32 polegadas">
-                </div>
-
-                <div class="product-info">
-                    <span>Eletrônicos</span>
-                    <h3>Smart TV Philco 32"</h3>
-                    <strong>R$ 949,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 25 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="capa protetora colchao box"
-               href="https://meli.la/1kVPq76"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80"
-                         alt="Capa protetora para colchão box">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Capa Protetora para Colchão Box</h3>
-                    <strong>R$ 27,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 26 -->
-            <a class="product-card"
-               data-category="cozinha"
-               data-name="triturador de alimentos"
-               href="https://meli.la/1K5uZQL"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"
-                         alt="Triturador de alimentos">
-                </div>
-
-                <div class="product-info">
-                    <span>Cozinha</span>
-                    <h3>Triturador de Alimentos</h3>
-                    <strong>R$ 18,00</strong>
-                </div>
-
-            </a>
-
-
-            <!-- 27 -->
-            <a class="product-card"
-               data-category="casa"
-               data-name="kit acessorios banheiro"
-               href="https://meli.la/2gNThtt"
-               target="_blank"
-               rel="noopener noreferrer sponsored">
-
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1584622781867-7f9e9d0d9d6d?auto=format&fit=crop&w=800&q=80"
-                         alt="Kit acessórios para banheiro">
-                </div>
-
-                <div class="product-info">
-                    <span>Casa</span>
-                    <h3>Kit Acessórios para Banheiro</h3>
-                    <strong>R$ 69,00</strong>
-                </div>
-
-            </a>
-
-
-        </div>
-
-
-        <div class="empty-state" id="emptyState">
-
-            <div>🔎</div>
-
-            <h3>Nenhum produto encontrado</h3>
-
-            <p>
-                Tente procurar por outro termo.
-            </p>
-
-            <button id="clearSearch">
-                Limpar busca
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section class="middle-banner">
-
-    <div class="container">
-
-        <div class="banner-content">
-
-            <span>✨ MIMOLAR</span>
-
-            <h2>
-                Sua casa pode ficar ainda mais especial.
-            </h2>
-
-            <p>
-                Encontre aquele produto que você nem sabia
-                que precisava.
-            </p>
-
-            <a href="#produtos" class="banner-button">
-                Explorar achadinhos →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section class="about" id="sobre">
-
-    <div class="container about-grid">
-
-        <div class="about-title">
-
-            <span class="eyebrow">
-                SOBRE A MIMOLAR
+            <span>
+                © 2026 MimoLar. Todos os direitos reservados.
             </span>
 
-            <h2>
-                Encontramos pequenos
-                <span>achados</span> para você.
-            </h2>
+            <span>
+                Alguns links podem gerar comissão para a MimoLar.
+            </span>
 
         </div>
 
-
-        <div class="about-text">
-
-            <p>
-                A MimoLar nasceu para facilitar a busca por
-                produtos interessantes para sua casa.
-            </p>
-
-            <p>
-                Reunimos produtos de diferentes categorias
-                em um só lugar para você descobrir opções
-                práticas e acessíveis.
-            </p>
-
-            <div class="about-highlight">
-
-                <strong>27+</strong>
-
-                <span>
-                    produtos selecionados
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+    </footer>
 
 
-
-<section class="final-cta">
-
-    <div class="container">
-
-        <div class="cta-box">
-
-            <span>AINDA PROCURANDO?</span>
-
-            <h2>
-                Talvez seu próximo achadinho
-                esteja aqui.
-            </h2>
-
-            <a href="#produtos">
-                Ver todos os produtos →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-
-<footer class="footer">
-
-    <div class="container footer-content">
-
-        <div>
-
-            <a href="#" class="logo footer-logo">
-                <span class="logo-icon">M</span>
-                <span>Mimo<span>Lar</span></span>
-            </a>
-
-            <p>
-                Achadinhos para deixar sua casa
-                mais prática e bonita.
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="#inicio">Início</a>
-
-            <a href="#produtos">Produtos</a>
-
-            <a href="#sobre">Sobre</a>
-
-        </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-        <span>
-            © 2026 MimoLar. Todos os direitos reservados.
-        </span>
-
-        <span>
-            Links de afiliado
-        </span>
-
-    </div>
-
-</footer>
-
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
