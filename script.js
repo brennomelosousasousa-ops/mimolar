@@ -1,200 +1,277 @@
-const searchInput = document.getElementById("searchInput");
-const productCards = document.querySelectorAll(".product-card");
+document.addEventListener("DOMContentLoaded", () => {
 
-const categoryButtons =
-    document.querySelectorAll(".category-button");
+    const searchInput = document.getElementById("searchInput");
 
-const emptyState =
-    document.getElementById("emptyState");
+    const productCards =
+        document.querySelectorAll(".product-card");
 
-const clearSearch =
-    document.getElementById("clearSearch");
+    const categoryButtons =
+        document.querySelectorAll(".category-button");
 
-const menuButton =
-    document.getElementById("menuButton");
+    const emptyState =
+        document.getElementById("emptyState");
 
-const nav =
-    document.getElementById("nav");
+    const clearSearch =
+        document.getElementById("clearSearch");
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const nav =
+        document.getElementById("nav");
 
 
-let currentCategory = "todos";
-let currentSearch = "";
+    let currentCategory = "todos";
+
+    let currentSearch = "";
 
 
-/* FILTROS */
+    /* ================= FILTROS ================= */
 
-function filterProducts() {
+    function filterProducts() {
 
-    let visibleProducts = 0;
+        let visibleProducts = 0;
 
-    productCards.forEach(card => {
+        productCards.forEach(card => {
 
-        const category =
-            card.dataset.category;
+            const category =
+                card.dataset.category || "";
 
-        const name =
-            card.dataset.name.toLowerCase();
+            const name =
+                card.dataset.name || "";
 
-        const categoryMatch =
-            currentCategory === "todos" ||
-            category === currentCategory;
+            const matchesCategory =
+                currentCategory === "todos" ||
+                category === currentCategory;
 
-        const searchMatch =
-            name.includes(currentSearch);
+            const matchesSearch =
+                name.toLowerCase()
+                    .includes(currentSearch.toLowerCase());
 
-        if (categoryMatch && searchMatch) {
+            if (matchesCategory && matchesSearch) {
 
-            card.classList.remove("hidden");
+                card.classList.remove("hidden");
 
-            visibleProducts++;
+                visibleProducts++;
+
+            } else {
+
+                card.classList.add("hidden");
+
+            }
+
+        });
+
+
+        if (visibleProducts === 0) {
+
+            emptyState.classList.add("visible");
 
         } else {
 
-            card.classList.add("hidden");
+            emptyState.classList.remove("visible");
 
         }
 
-    });
-
-
-    if (visibleProducts === 0) {
-
-        emptyState.classList.add("show");
-
-    } else {
-
-        emptyState.classList.remove("show");
-
     }
 
-}
 
-
-/* CATEGORIAS */
-
-categoryButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        categoryButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        currentCategory =
-            button.dataset.category;
-
-        filterProducts();
-
-    });
-
-});
-
-
-/* BUSCA */
-
-searchInput.addEventListener("input", event => {
-
-    currentSearch =
-        event.target.value
-            .toLowerCase()
-            .trim();
-
-    filterProducts();
-
-});
-
-
-/* LIMPAR BUSCA */
-
-clearSearch.addEventListener("click", () => {
-
-    searchInput.value = "";
-
-    currentSearch = "";
-
-    currentCategory = "todos";
+    /* ================= CATEGORIAS ================= */
 
     categoryButtons.forEach(button => {
 
-        button.classList.remove("active");
+        button.addEventListener("click", () => {
+
+            categoryButtons.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            currentCategory =
+                button.dataset.category;
+
+            filterProducts();
+
+        });
 
     });
 
-    document
-        .querySelector('[data-category="todos"]')
-        .classList.add("active");
 
-    filterProducts();
+    /* ================= BUSCA ================= */
 
-});
+    if (searchInput) {
 
+        searchInput.addEventListener("input", event => {
 
-/* MENU MOBILE */
+            currentSearch =
+                event.target.value.trim();
 
-menuButton.addEventListener("click", () => {
+            filterProducts();
 
-    nav.classList.toggle("open");
+        });
 
-});
-
-
-/* FECHAR MENU AO CLICAR */
-
-nav.querySelectorAll("a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        nav.classList.remove("open");
-
-    });
-
-});
+    }
 
 
-/* ANIMAÇÃO DOS PRODUTOS */
+    /* ================= LIMPAR ================= */
 
-const observer =
-    new IntersectionObserver(
-        entries => {
+    if (clearSearch) {
 
-            entries.forEach(entry => {
+        clearSearch.addEventListener("click", () => {
 
-                if (entry.isIntersecting) {
+            currentCategory = "todos";
 
-                    entry.target.style.opacity = "1";
+            currentSearch = "";
 
-                    entry.target.style.transform =
-                        "translateY(0)";
+            if (searchInput) {
+                searchInput.value = "";
+            }
 
+            categoryButtons.forEach(button => {
+
+                button.classList.remove("active");
+
+                if (
+                    button.dataset.category === "todos"
+                ) {
+                    button.classList.add("active");
                 }
 
             });
 
-        },
-        {
-            threshold: 0.08
+            filterProducts();
+
+        });
+
+    }
+
+
+    /* ================= MENU MOBILE ================= */
+
+    if (menuButton && nav) {
+
+        menuButton.addEventListener("click", () => {
+
+            nav.classList.toggle("open");
+
+        });
+
+
+        nav.querySelectorAll("a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                nav.classList.remove("open");
+
+            });
+
+        });
+
+    }
+
+
+    /* ================= ANIMAÇÃO DOS PRODUTOS ================= */
+
+    productCards.forEach((card, index) => {
+
+        card.style.opacity = "0";
+
+        card.style.transform = "translateY(15px)";
+
+        setTimeout(() => {
+
+            card.style.transition =
+                "opacity 0.45s ease, transform 0.45s ease";
+
+            card.style.opacity = "1";
+
+            card.style.transform = "translateY(0)";
+
+        }, Math.min(index * 35, 600));
+
+    });
+
+
+    /* ================= FILTRO INICIAL ================= */
+
+    filterProducts();
+
+
+    /* ================= CARROSSEL ================= */
+
+    const carousel =
+        document.querySelector(".carousel-track");
+
+    if (carousel) {
+
+        let isDown = false;
+
+        let startX;
+
+        let scrollLeft;
+
+
+        carousel.addEventListener("mousedown", event => {
+
+            isDown = true;
+
+            startX = event.pageX -
+                carousel.offsetLeft;
+
+            scrollLeft =
+                carousel.scrollLeft;
+
+        });
+
+
+        carousel.addEventListener("mouseleave", () => {
+
+            isDown = false;
+
+        });
+
+
+        carousel.addEventListener("mouseup", () => {
+
+            isDown = false;
+
+        });
+
+
+        carousel.addEventListener("mousemove", event => {
+
+            if (!isDown) return;
+
+            event.preventDefault();
+
+            const x =
+                event.pageX -
+                carousel.offsetLeft;
+
+            const walk =
+                (x - startX) * 1.3;
+
+            carousel.scrollLeft =
+                scrollLeft - walk;
+
+        });
+
+    }
+
+
+    /* ================= ESC FECHA MENU ================= */
+
+    document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+
+            if (nav) {
+                nav.classList.remove("open");
+            }
+
         }
-    );
 
-
-productCards.forEach((card, index) => {
-
-    card.style.opacity = "0";
-
-    card.style.transform =
-        "translateY(15px)";
-
-    card.style.transition =
-        `opacity .5s ease ${index * 0.025}s,
-         transform .5s ease ${index * 0.025}s`;
-
-    observer.observe(card);
+    });
 
 });
-
-
-/* INICIALIZA */
-
-filterProducts();
